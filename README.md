@@ -1,4 +1,4 @@
-## Test Your Laravel File Upload Skills
+## Test Your Laravel Skills
 
 This repository is a test for you: perform a set of tasks listed below, and fix the PHPUnit tests, which are currently intentionally failing.
 
@@ -111,7 +111,7 @@ Test method `test_loop_shows_table()`.
 
 If you make a Pull Request to the `main` branch, it will automatically run the tests via **Github Actions** and show you/us if the tests pass.
 
-![]()
+![](https://laraveldaily.com/uploads/2024/06/free-general-tasks-github-actions.png)
 
 If you want us to also approve/review it manually and give you a virtual badge, please mention **@LaravelDaily** in the comment/description of the Pull Request with additional questions if you have any.
 
