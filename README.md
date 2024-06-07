@@ -4,7 +4,7 @@ This repository is a test for you: perform a set of tasks listed below, and fix 
 
 To **automatically** test if all the Routes work correctly, there are PHPUnit tests in the `tests/Feature/GeneralTest.php` file.
 
-In the very beginning, if you run `php artisan test`, all 7 tests fail:
+In the very beginning, if you run `php artisan test`, all tests fail:
 
 ![](https://laraveldaily.com/uploads/2024/06/free-general-tasks-failing-tests.png)
 
@@ -95,7 +95,7 @@ So password `12345678` is invalid, but password `a12345678` is valid.
 
 Hint: you need to modify file `app/Http/Controllers/Auth/RegisteredUserController.php`, which is almost default from Laravel Breeze.
 
-Test method: `test_password_at_least_one_uppercase_lowercase_letter`().
+Test method: `test_password_at_least_one_uppercase_lowercase_letter()`.
 
 ---
 
@@ -107,15 +107,11 @@ Test method `test_loop_shows_table()`.
 
 ---
 
-## Submit Your Solution to Get a Review/Badge
+## Submit Your Solution to Auto-Test it
 
 If you make a Pull Request to the `main` branch, it will automatically run the tests via **Github Actions** and show you/us if the tests pass.
 
 ![](https://laraveldaily.com/uploads/2024/06/free-general-tasks-github-actions.png)
-
-If you want us to also approve/review it manually and give you a virtual badge, please mention **@LaravelDaily** in the comment/description of the Pull Request with additional questions if you have any.
-
-Then, someone on our team will review and manually assign you a badge for this topic on the [LaravelDaily.com](https://laraveldaily.com) website.
 
 If you don't know how to make a Pull Request, [here's my video with instructions](https://www.youtube.com/watch?v=vEcT6JIFji0).
 
