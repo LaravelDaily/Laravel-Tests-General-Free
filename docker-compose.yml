@@ -13,9 +13,11 @@ services:
             - '${VITE_PORT:-5173}:${VITE_PORT:-5173}'
         environment:
             WWWUSER: '${WWWUSER}'
+            APP_ENV: '${APP_ENV:-local}'
             LARAVEL_SAIL: 1
             XDEBUG_MODE: '${SAIL_XDEBUG_MODE:-off}'
             XDEBUG_CONFIG: '${SAIL_XDEBUG_CONFIG:-client_host=host.docker.internal}'
+            PHP_IDE_CONFIG: '${PHP_IDE_CONFIG:-serverName=dockerServer}'
             IGNITION_LOCAL_SITES_PATH: '${PWD}'
         volumes:
             - '.:/var/www/html'
@@ -47,6 +49,16 @@ services:
                 - '-p${DB_PASSWORD}'
             retries: 3
             timeout: 5s
+    phpmyadmin:
+        image: phpmyadmin
+        restart: always
+        ports:
+            - "8080:80"
+        environment:
+            - PMA_HOST=mysql
+            - UPLOAD_LIMIT=1G
+        networks:
+            - sail
 networks:
     sail:
         driver: bridge
