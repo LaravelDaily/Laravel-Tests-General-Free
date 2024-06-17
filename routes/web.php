@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 // TASK: Add a route below to / URL
+Route::get('/', \App\Http\Controllers\HomeController::class)->name('home');
 
 Route::post('posts', [\App\Http\Controllers\PostController::class, 'store'])->name('posts.store');
 Route::put('posts/{post}', [\App\Http\Controllers\PostController::class, 'update'])->name('posts.update');
