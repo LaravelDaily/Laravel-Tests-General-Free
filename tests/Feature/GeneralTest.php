@@ -67,6 +67,7 @@ class GeneralTest extends TestCase
     {
         $user = User::factory()->create();
         $team = Team::create(['name' => 'Team 1']);
+        
         $team->users()->attach($user, [
             'position' => 'Manager',
             'created_at' => $createdAt = now()->toDateTimeString(),
@@ -81,6 +82,7 @@ class GeneralTest extends TestCase
 
     public function test_check_or_update_user()
     {
+        User::factory()->create(['name' => 'john', 'email' => 'john@doe.com']);
         $response = $this->get(route('user', ['john', 'john@doe.com']));
         $response->assertOk();
 
