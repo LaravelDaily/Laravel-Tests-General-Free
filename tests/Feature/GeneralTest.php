@@ -20,7 +20,7 @@ class GeneralTest extends TestCase
     public function test_home_screen_returns_home_view_and_shows_homepage(): void
     {
         $response = $this->get('/');
-
+        
         $response->assertOk()
             ->assertViewIs('home')
             ->assertSee('Homepage');
