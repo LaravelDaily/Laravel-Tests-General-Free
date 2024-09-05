@@ -1,9 +1,11 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProfileController;
 
 // TASK: Add a route below to / URL
+Route::get('/', HomeController::class);
 
 Route::post('posts', [\App\Http\Controllers\PostController::class, 'store'])->name('posts.store');
 Route::put('posts/{post}', [\App\Http\Controllers\PostController::class, 'update'])->name('posts.update');
